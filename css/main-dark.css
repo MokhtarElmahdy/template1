@@ -1,0 +1,526 @@
+.cd-headline {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-headline {
+    font-size: 4.4rem;
+    font-weight: 300;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-headline {
+    font-size: 6rem;
+  }
+}
+.cd-headline.clip span {
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+.cd-headline.clip .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.cd-headline.clip .cd-words-wrapper::after {
+  /* line */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #aebcb9;
+}
+
+.cd-headline.clip b {
+  opacity: 0;
+}
+
+.cd-headline.clip b.is-visible {
+  opacity: 1;
+}
+
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #1C1C1C;
+}
+
+.nav-link.active {
+  position: relative;
+}
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1C1C1C;
+  -webkit-animation: activeLink 0.5s ease-in-out;
+          animation: activeLink 0.5s ease-in-out;
+}
+
+@-webkit-keyframes activeLink {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes activeLink {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.go-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99999999999;
+  padding: 15px;
+  color: #FFF;
+  background-color: #888;
+  display: none;
+}
+
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../img/bg.jpg);
+  background-position: 0px 0px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero .navbar {
+  transition: 0.5s;
+}
+.hero .navbar .navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 25.7143px;
+  letter-spacing: 1px;
+}
+.hero .navbar .nav-item .nav-link {
+  color: #FFF;
+  padding: 0;
+}
+.hero .banner .caption h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+}
+.hero .banner .caption h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.5vw;
+  font-weight: 200;
+}
+.hero .banner .caption .social-icons svg {
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+section.about .image-holder {
+  padding: 0 0 0 30px;
+  position: relative;
+}
+section.about .image-holder img {
+  width: 100%;
+}
+section.about .image-holder::after {
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 0px;
+  bottom: -30px;
+  background-image: url(../img/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+section.about .info h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 33px;
+  color: #888;
+}
+section.about .info .skills .skill {
+  background-color: #373737;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  border-radius: 5px;
+}
+section.about .info .skills .skill .skill-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #888;
+  height: 100%;
+  padding-inline: 15px;
+  color: #FFF;
+  border-radius: 5px;
+}
+section.about .info .skills .skill .skill-progress p:first-of-type {
+  font-family: "Montserrat", sans-serif;
+}
+section.about a {
+  border: 1px solid #888;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+section.about a:hover {
+  border-color: #888;
+}
+section.about a.fill {
+  background-color: #888;
+  color: #FFF;
+}
+section.about a.fill:hover {
+  background-color: #FFF;
+  color: #1C1C1C;
+}
+section.about a.outline {
+  background-color: #FFF;
+  color: #1C1C1C;
+}
+section.about a.outline:hover {
+  background-color: #888;
+  color: #FFF;
+}
+section.services {
+  background-color: #373737;
+}
+section.services .sction-title h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  display: inline-block;
+  position: relative;
+  z-index: 4;
+  color: #888;
+}
+section.services .sction-title h2::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/dots.png);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+section.services .box {
+  background-color: #FFF;
+  padding-block: 50px;
+  padding-inline: 20px;
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+section.services .box .icon {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 30px;
+  transition: 0.3s;
+}
+section.services .box:hover .icon {
+  color: #FFF;
+  background-color: #1C1C1C;
+}
+section.services .box p {
+  word-spacing: 2px;
+  font-size: 14px;
+  color: #888 !important;
+}
+section.works .sction-title h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  display: inline-block;
+  position: relative;
+  z-index: 4;
+  color: #888;
+}
+section.works .sction-title h2::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/dots.png);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+section.works .nav .nav-item .nav-link {
+  cursor: pointer;
+  color: #888 !important;
+  font-weight: 700;
+}
+section.works .item {
+  position: relative;
+}
+section.works .item .item-caption {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  opacity: 0;
+  transition: 0.5s;
+}
+section.works .item .item-caption h6 {
+  position: relative;
+  top: -10px;
+  transition: 0.5s;
+}
+section.works .item .item-caption .icons {
+  display: flex;
+  position: relative;
+  bottom: -10px;
+  gap: 10px;
+  transition: 0.5s;
+}
+section.works .item .item-caption .icons .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1C1C1C;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.works .item:hover .item-caption {
+  opacity: 1;
+}
+section.works .item:hover .icons {
+  opacity: 1;
+  bottom: 0px;
+}
+section.works .item:hover h6 {
+  opacity: 1;
+  top: 0px;
+}
+section.clients {
+  background-color: #373737;
+}
+section.clients .sction-title h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  display: inline-block;
+  position: relative;
+  z-index: 4;
+  color: #888;
+}
+section.clients .sction-title h2::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/dots.png);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+section.clients .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+section.clients .carousel-inner .carousel-item .client-box {
+  max-width: 945px;
+  margin-inline: auto;
+}
+section.clients .carousel-inner .carousel-item .client-box .author-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+section.clients .carousel-inner .carousel-item .client-box h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #888 !important;
+}
+section.clients .carousel-inner .carousel-item .client-box span {
+  font-size: 12px;
+  font-weight: 800;
+  color: #888;
+  margin-bottom: 30px;
+}
+section.numbers .item {
+  color: #888;
+}
+section.numbers .item .counter {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  transition: 10s;
+}
+section.numbers .item p {
+  color: #748182;
+}
+section.blog {
+  background-color: #373737;
+}
+section.blog .sction-title h2 {
+  color: #888;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  display: inline-block;
+  position: relative;
+  z-index: 4;
+}
+section.blog .sction-title h2::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/dots.png);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+section.blog .card {
+  color: #343434;
+}
+section.blog .card .card-media {
+  overflow: hidden;
+}
+section.blog .card .card-media img {
+  transition: 0.5s;
+}
+section.blog .card .card-media img:hover {
+  transform: scale(1.1);
+}
+section.blog .card .card-subtitle {
+  font-size: small;
+}
+section.blog .card .card-title {
+  font-family: "Montserrat", sans-serif;
+}
+section.blog .card .card-link {
+  border-bottom: 1px solid #343434;
+  display: inline-block;
+  cursor: pointer;
+}
+section.blog .indicators {
+  text-align: center;
+}
+section.blog .indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #888;
+}
+section.contact .sction-title h2 {
+  color: #888;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  display: inline-block;
+  position: relative;
+  z-index: 4;
+}
+section.contact .sction-title h2::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/dots.png);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+section.contact .item .icon {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+section.contact .item .icon:hover {
+  color: #f4f4f4;
+  background-color: #1C1C1C;
+}
+section.contact .item h6 {
+  color: #888;
+}
+section.contact input:not([type=submit]),
+section.contact textarea {
+  background-color: #F4F4F4;
+  border-color: #F4F4F4;
+}
+section.contact input:not([type=submit]):focus,
+section.contact textarea:focus {
+  box-shadow: none;
+  background-color: #F4F4F4;
+  border-color: #F4F4F4;
+}
+section.contact input[type=submit] {
+  background-color: #888;
+  color: #FFF;
+}
+section.contact input[type=submit]:hover {
+  background-color: #FFF;
+  color: #1C1C1C;
+  border-color: #1C1C1C;
+}
+
+footer {
+  font-family: "Poppins", sans-serif;
+  background-color: #1C1C1C;
+}/*# sourceMappingURL=main-dark.css.map */
